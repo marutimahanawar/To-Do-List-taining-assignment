@@ -1,0 +1,82 @@
+<div id="allbody">
+<div class="container-fluid" id="nav">
+  <div class="mt-3" id="box">
+    <div class="mt-3 me-2">
+      <i class="fa-solid fa-rectangle-list fa-2xl" style="color: #d50744;"></i>    </div>
+    <div>
+      <h3>Tasks</h3>
+      <h5 class="mt-1">All Tasks</h5>
+    </div>
+  </div>
+  <div class="mt-4">
+    <div class="ms-5">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      
+      <a routerLink="addtask" class="btn btn-warning me-1">New Task</a>
+      <button type="button" class="btn btn-warning" (click)="Refersh()">Refersh</button>
+    </div>
+  </div>
+    <div class="me-5">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<div *ngIf="showWelcome" id="list">
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" name="" id="" /></th>
+        <th>Assigned To</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Comments</th>
+        <th colspan="2" class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td><input type="checkbox" name="" id="" /></td>
+        <td>{{ task.assignedTo }}</td>
+        <td>{{ task.status }}</td>
+        <td>{{ task.dueDate }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.description }}</td>
+        <td>
+          <i class="fa-solid fa-pen-to-square fa-lg" (click)="openEditDialog(task)" style="cursor: pointer;"></i>
+        </td>
+        <td>
+          <i class="fa-solid fa-trash fa-lg" (click)="deleteTask(task.id)" style="cursor: pointer;"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="container-fluid p-3" id="footer">
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-md-2">
+        <input type="number" value="20" style="width: 50px;">
+      </div>
+      <div class="col-md-10 d-flex justify-content-end">
+        <ul class="pagination mb-0">
+          <li class="page-item"><a class="page-link" href="#">First</a></li>
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          <li class="page-item"><a class="page-link" href="#">Last</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+</div>
+

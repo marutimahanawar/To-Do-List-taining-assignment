@@ -1,0 +1,44 @@
+{
+  "task": [
+    {
+      "assignedTo": "User 1",
+      "status": "Completed",
+      "dueDate": "12/10/2024",
+      "priority": "Low",
+      "description": "This task is Good",
+      "id": "693c"
+    },
+    {
+      "assignedTo": "User 2",
+      "status": "In Progress",
+      "dueDate": "14/09/2024",
+      "priority": "High",
+      "description": "This task is in Progress",
+      "id": "758c"
+    },
+    {
+      "assignedTo": "User 3",
+      "status": "Not Started",
+      "dueDate": "18/08/2024",
+      "priority": "Low",
+      "description": "This task is not started",
+      "id": "18a9"
+    },
+    {
+      "assignedTo": "User 4",
+      "status": "In Progress",
+      "dueDate": "12/06/2024",
+      "priority": "Normal",
+      "description": "This task is in progress",
+      "id": "aaab"
+    },
+    {
+      "assignedTo": "User 5",
+      "status": "Completed",
+      "dueDate": "27/09/2024",
+      "priority": "High",
+      "description": "This task is good",
+      "id": "1334"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <div class="card">
+    <h1 class="card-header text-center">Edit Task</h1>
+    <div class="card-body">
+      <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm.value)">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="assignedTo" class="form-label">Assigned To<span class="text-danger">*</span></label>
+            <select class="form-select" id="assignedTo" name="assignedTo" ngModel required [(ngModel)]="task.assignedTo">
+              <option value="User 1" selected>User 1</option>
+              <option value="User 2">User 2</option>
+              <option value="User 3">User 3</option>
+              <option value="User 4">User 4</option>
+              <option value="User 5">User 5</option>
+              <option value="User 6">User 6</option>
+              <option value="User 7">User 7</option>
+              <option value="User 8">User 8</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
+            <select class="form-select" id="status" name="status" ngModel required [(ngModel)]="task.status">
+              <option value="Not Started" selected>Not Started</option>
+              <option value="Completed">Completed</option>
+              <option value="In Progress">In Progress</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="dueDate" class="form-label">Due Date</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="dueDate" name="dueDate" [(ngModel)]="task.dueDate">
+              <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="priority" class="form-label">Priority<span class="text-danger">*</span></label>
+            <select class="form-select" id="priority" name="priority" ngModel required [(ngModel)]="task.priority">
+              <option value="Normal">Normal</option>
+              <option value="High">High</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="task.description"></textarea>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-warning" (click)="onCancel()">Cancel</button>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

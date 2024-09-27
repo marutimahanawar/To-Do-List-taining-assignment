@@ -1,0 +1,63 @@
+
+#icon{
+    size: 100px;
+}
+#box{
+    display: flex;
+}
+#length{
+  background-color: #f5f5f5;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+}
+#list{
+    background-color: #ffffff;
+}
+table {
+    width: 100%; 
+    border-collapse: 
+  }
+  
+  th, td {
+    padding: 8px 12px; 
+    text-align: left;
+    border: none; 
+  }
+  
+  tr {
+    border-bottom: 1px solid #ddd; 
+  }
+  
+  th {
+    background-color: #ffffff; 
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #ffffff; 
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    th, td {
+      display: block;
+      width: 100%;
+    }
+  
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ddd;
+    }
+  }
+  #footer{
+      background-color: #f5f5f5;
+  }
+  #row{
+    display: flex;
+    justify-content: space-between;
+  }
